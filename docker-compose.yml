@@ -39,10 +39,10 @@ services:
     #      - UMAMI_WEBSITE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  # Umami 网站 ID (Umami Website ID)
     #      - UMAMI_SCRIPT_URL=https://analytics.umami.is/script.js  # Umami 脚本 URL，默认为官方地址 (Umami Script URL, defaults to official URL)
 
-    depends_on:
-      #      - redis
-      #      - postgres
-      #      - mysql  # Uncomment if using internal MySQL
+    # depends_on:
+    #   - redis
+    #   - postgres
+    #   - mysql  # Uncomment if using internal MySQL
     networks:
       - baota_net
     healthcheck:
@@ -58,7 +58,3 @@ services:
 networks:
   baota_net:
     external: true
-
-volumes:
-  #  pg_data:
-  #  mysql_data:
