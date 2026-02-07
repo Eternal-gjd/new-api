@@ -26,6 +26,7 @@ services:
       - ./data:/data
       - ./logs:/app/logs
     environment:
+      - PORT=19096
       #      - SQL_DSN=postgresql://root:123456@postgres:5432/new-api # ⚠️ IMPORTANT: Change the password in production!
       - SQL_DSN=newapi:ccmax_2099@tcp(mysql_ccmax:3306)/newapi # External MySQL container
       - REDIS_CONN_STRING=redis://172.17.0.1:6379  # External Redis (host gateway IP)
